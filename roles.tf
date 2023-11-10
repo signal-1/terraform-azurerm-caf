@@ -114,6 +114,8 @@ locals {
     purview_accounts                           = local.combined_objects_purview_accounts
     recovery_vaults                            = local.combined_objects_recovery_vaults
     resource_groups                            = local.combined_objects_resource_groups
+    servicebus_namespaces                      = local.combined_objects_servicebus_namespaces
+    servicebus_topics                          = local.combined_objects_servicebus_topics
     storage_accounts                           = local.combined_objects_storage_accounts
     storage_containers                         = local.combined_objects_storage_containers
     subscriptions                              = local.combined_objects_subscriptions
