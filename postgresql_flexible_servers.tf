@@ -24,6 +24,7 @@ module "postgresql_flexible_servers" {
     private_dns_zone_id = try(
       local.combined_objects_private_dns[each.value.private_dns_zone.lz_key][each.value.private_dns_zone.key].id,
       local.combined_objects_private_dns[local.client_config.landingzone_key][each.value.private_dns_zone.key].id,
+      each.value.private_dns_zone.id,
       null
     )
 
