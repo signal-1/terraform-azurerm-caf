@@ -37,6 +37,7 @@ module "private_endpoints" {
     postgresql_servers         = local.combined_objects_postgresql_servers
     recovery_vaults            = local.combined_objects_recovery_vaults
     redis_caches               = local.combined_objects_redis_caches
+    servicebus_namespaces      = local.combined_objects_servicebus_namespaces
     storage_accounts           = local.combined_objects_storage_accounts
     synapse_workspaces         = local.combined_objects_synapse_workspaces
     signalr_services           = local.combined_objects_signalr_services
