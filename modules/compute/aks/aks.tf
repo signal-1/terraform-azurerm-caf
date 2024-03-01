@@ -80,7 +80,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
     vnet_subnet_id = can(var.settings.default_node_pool.vnet_subnet_id) || can(var.settings.default_node_pool.subnet.resource_id) ? try(var.settings.default_node_pool.vnet_subnet_id, var.settings.default_node_pool.subnet.resource_id) : var.subnets[try(var.settings.default_node_pool.subnet_key, var.settings.default_node_pool.subnet.key)].id
 
     dynamic "upgrade_settings" {
-      for_each = try(var.settings.default_node_pool.upgrade_settings, null) == null ? [] : [1]
+      for_each = try(var.settings.default_node_pool.upgrade_settings[*], {})
       content {
         max_surge = upgrade_settings.value.max_surge
       }
