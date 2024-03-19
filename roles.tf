@@ -91,6 +91,7 @@ locals {
     data_factory                               = local.combined_objects_data_factory
     databricks_workspaces                      = local.combined_objects_databricks_workspaces
     dns_zones                                  = local.combined_objects_dns_zones
+    diagnostic_storage_accounts                = local.combined_objects_diagnostic_storage_accounts
     event_hub_namespaces                       = local.combined_objects_event_hub_namespaces
     keyvaults                                  = local.combined_objects_keyvaults
     kusto_clusters                             = local.combined_objects_kusto_clusters
